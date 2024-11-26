@@ -23,7 +23,7 @@ function Header() {
       </p>
       <div className="flex items-center mt-4">
         <a
-          href="/path/to/your/resume/SWE_Resume_Wenzel_Escudero.docx"
+          href="/Resume - Wenzel Escudero.pdf"
           className="px-3 py-1 border-2 border-black dark:border-white rounded-lg text-base font-semibold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           download
         >
