@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white font-sans">
+    <div className="bg-white text-black dark:bg-zinc-950 dark:text-white font-sans">
       <Navbar />
       <div className="flex flex-col lg:flex-row pt-16">
         <div className="lg:flex-shrink-0">

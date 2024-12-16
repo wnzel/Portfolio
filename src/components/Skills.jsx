@@ -35,7 +35,7 @@ function Skills() {
   ];
 
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white flex justify-center">
+    <div className="bg-white text-black dark:bg-zinc-950 dark:text-white flex justify-center">
       <section id="skills" className="w-full max-w-4xl px-8 py-6 text-left">
         <h2 className="text-3xl font-bold mb-6">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

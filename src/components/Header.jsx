@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
-    <header className="flex flex-col items-center py-6 bg-white dark:bg-black text-black dark:text-white mx-4 sm:mx-8 lg:mx-40 lg:sticky lg:top-16 lg:z-10">
+    <header className="flex flex-col items-center py-6 bg-white dark:bg-zinc-950 text-black dark:text-white mx-4 sm:mx-8 lg:mx-40 lg:sticky lg:top-16 lg:z-10">
       <img
         src="wenzel.jpg"
         alt="Profile"

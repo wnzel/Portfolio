@@ -14,15 +14,15 @@ const Projects = () => {
         "Integrated third-party APIs for real-time data updates and predictive analytics.",
       ],
       technologies: ["Python", "React", "JavaScript"],
-      imageSrc: "placement.JPG",
+      imageSrc: "ballerprops.JPG",
       imageAlt: "Sports Analytics Project Thumbnail",
-      codeLink: "https://github.com/wnzel",
+      codeLink: "https://github.com/wnzel/baller-props",
       demoLink: "https://github.com/wnzel",
     },
   ];
 
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white flex justify-center">
+    <div className="bg-white text-black dark:bg-zinc-950 dark:text-white flex justify-center">
       <section id="projects" className="w-full max-w-4xl px-8 py-6 text-left">
         <h2 className="text-4xl font-bold mb-8">Projects</h2>
         {projects.map((project, index) => (
@@ -94,7 +94,7 @@ const Projects = () => {
                       icon={faArrowUpRightFromSquare}
                       className="mr-2"
                     />
-                    Live Demo
+                    Live Site
                   </a>
                 </div>
               </div>

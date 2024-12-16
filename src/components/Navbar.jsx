@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white dark:bg-black shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-white dark:bg-zinc-950 shadow-md z-50">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 py-4">
         <button
           onClick={() => scrollToSection("about")}
@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="h-1 w-full bg-gray-300 dark:bg-gray-900 opacity-10 dark:opacity-80 transition-opacity duration-1000 ease-in-out"></div>
+      <div className="h-1 w-full bg-gray-300 dark:bg-zinc-800 opacity-10 dark:opacity-80 transition-opacity duration-1000 ease-in-out"></div>
     </nav>
   );
 };
