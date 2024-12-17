@@ -7,7 +7,7 @@ const Experience = () => {
       date: "December 2024 - Present",
       image: "w.png",
       description: [
-        "Developed custom, user-centric web applications for fclients, ensuring optimal performance and easy user experience.",
+        "Developed custom, user-centric web applications for clients, ensuring optimal performance and easy user experience.",
         "Implemented responsive and accessible design principles, ensuring compatibility across devices and adherence to industry practices.",
         "Maintained clear documentation and provided ongoing support, resulting in long-term client relationships and repeat business.",
       ],
