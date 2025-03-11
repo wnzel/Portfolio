@@ -11,7 +11,7 @@ const Education = () => {
     {
       degree: "Associate in Computer Science",
       institution: "Phoenix College, Phoenix, Arizona",
-      date: "Expected Graduation: December 2024",
+      date: "January 2025",
       image: "pc.png",
     },
   ];
