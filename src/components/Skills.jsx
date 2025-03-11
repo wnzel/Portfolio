@@ -4,31 +4,31 @@ function Skills() {
   const skills = [
     {
       category: "Languages",
-      items: ["JavaScript", "TypeScript", "Python", "C#", "C++"],
+      items: ["Python", "TypeScript", "JavaScript", "HTML", "CSS"],
       color: "bg-blue-500",
       textColor: "text-blue-500",
     },
     {
       category: "Frameworks",
-      items: ["ReactJS", "NextJS", "ExpressJS", "Flask", "Django"],
+      items: ["React", "Next.js", "Node.js", "Flask", "FastAPI"],
       color: "bg-orange-500",
       textColor: "text-orange-500",
     },
     {
       category: "Backend",
-      items: ["Node.js", ".NET", "REST APIs", "Microservices"],
+      items: ["Node.js", "Docker", "REST APIs"],
       color: "bg-green-500",
       textColor: "text-green-500",
     },
     {
       category: "Databases",
-      items: ["Postgres", "SQL", "MongoDB", "Elasticsearch"],
+      items: ["Postgres", "SQL", "AWS", "Supabase"],
       color: "bg-red-500",
       textColor: "text-red-500",
     },
     {
       category: "Practices",
-      items: ["Microservices", "Microfrontend", "Git"],
+      items: ["Agile", "Version Control", "Git", "Testing & Debugging"],
       color: "bg-purple-500",
       textColor: "text-purple-500",
     },

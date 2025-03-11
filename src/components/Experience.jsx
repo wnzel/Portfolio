@@ -11,7 +11,7 @@ const Experience = () => {
         "Implemented responsive and accessible design principles, ensuring compatibility across devices and adherence to industry practices.",
         "Maintained clear documentation and provided ongoing support, resulting in long-term client relationships and repeat business.",
       ],
-      technologies: ["React", "Tailwind CSS", "JavaScript", "Node.js"],
+      technologies: ["React", "Tailwind", "JavaScript", "Python"],
     },
   ];
 
@@ -44,7 +44,7 @@ const Experience = () => {
               {exp.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-sm px-3 py-1 rounded"
+                  className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-sm px-3 py-1 rounded-full"
                 >
                   {tech}
                 </span>

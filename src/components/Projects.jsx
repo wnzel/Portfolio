@@ -6,7 +6,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 const Projects = () => {
   const projects = [
     {
-      title: "Sports Analytics",
+      title: "Baller Props: Sports Analytics",
       description: [
         "Developed an analytics platform for sports data, using Python for data analysis and React for the frontend.",
         "Enabled in-depth performance tracking, visualization, and insights for athletes and teams.",
@@ -17,7 +17,19 @@ const Projects = () => {
       imageSrc: "ballerprops.JPG",
       imageAlt: "Sports Analytics Project Thumbnail",
       codeLink: "https://github.com/wnzel/baller-props",
-      demoLink: "https://github.com/wnzel",
+      demoLink: "https://www.ballerprops.com/",
+    },
+    {
+      title: "Syncora: Music Streaming Platform",
+      description: [
+        "Built a music streaming platform allowing artists to upload, manage, and share their music with a dynamic audio playback system.",
+        "Engineered a cloud-based file storage system (AWS S3 / Cloudflare R2) to handle audio uploads and real-time streaming efficiently.",
+        "Implemented algorithm-driven features for smart music organization, playlist recommendations, and search optimization.",
+      ],
+      technologies: ["Python", "React", "Node.js", "AWS", "PostgreSQL"],
+      imageSrc: "Music Streaming.png",
+      imageAlt: "Syncora Project Thumbnail",
+      demoLink: "https://www.syncora.com/",
     },
   ];
 
@@ -29,17 +41,24 @@ const Projects = () => {
           <div
             key={index}
             className={`mb-12 ${
-              project.title === "Sports Analytics" ? "sm:order-first" : ""
+              project.title.includes("Sports Analytics") ||
+              project.title.includes("Music Streaming")
+                ? "sm:order-first"
+                : ""
             }`}
           >
             <div
               className={`flex flex-col sm:flex-row gap-6 ${
-                project.title === "Sports Analytics" ? "sm:flex-col" : ""
+                project.title.includes("Sports Analytics") ||
+                project.title.includes("Music Streaming")
+                  ? "sm:flex-col"
+                  : ""
               }`}
             >
               <div
                 className={`w-full ${
-                  project.title === "Sports Analytics"
+                  project.title.includes("Sports Analytics") ||
+                  project.title.includes("Music Streaming")
                     ? "sm:max-w-[30rem] lg:max-w-[30rem]"
                     : "sm:w-96 lg:w-96"
                 }`}
@@ -48,7 +67,8 @@ const Projects = () => {
                   src={project.imageSrc}
                   alt={project.imageAlt}
                   className={`w-full h-auto rounded-md ${
-                    project.title === "Sports Analytics"
+                    project.title.includes("Sports Analytics") ||
+                    project.title.includes("Music Streaming")
                       ? "sm:max-w-full"
                       : "max-w-[600px]"
                   }`}
@@ -68,22 +88,24 @@ const Projects = () => {
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-sm px-3 py-1 rounded"
+                      className="bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-sm px-3 py-1 rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-6">
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-black dark:text-white text-lg font-medium flex items-center"
-                  >
-                    <FontAwesomeIcon icon={faGithub} className="mr-2" /> View
-                    Code
-                  </a>
+                  {project.codeLink && (
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-black dark:text-white text-lg font-medium flex items-center"
+                    >
+                      <FontAwesomeIcon icon={faGithub} className="mr-2" />
+                      View Code
+                    </a>
+                  )}
                   <a
                     href={project.demoLink}
                     target="_blank"
