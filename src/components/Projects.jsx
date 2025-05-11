@@ -13,7 +13,7 @@ const Projects = () => {
         "Tracker refreshes every 15 minutes to fetch updated data.",
         "Integrated third-party APIs for real-time data updates and predictive analytics.",
       ],
-      technologies: ["Python", "React", "JavaScript"],
+      technologies: ["Python", "React", "JavaScript", "Supabase"],
       imageSrc: "ballerprops.JPG",
       imageAlt: "Sports Analytics Project Thumbnail",
       codeLink: "https://github.com/wnzel/baller-props",
@@ -26,10 +26,16 @@ const Projects = () => {
         "Engineered a cloud-based file storage system (AWS S3 / Cloudflare R2) to handle audio uploads and real-time streaming efficiently.",
         "Implemented algorithm-driven features for smart music organization, playlist recommendations, and search optimization.",
       ],
-      technologies: ["Python", "React", "Node.js", "AWS", "PostgreSQL"],
-      imageSrc: "Music Streaming.png",
+      technologies: [
+        "Python",
+        "React",
+        "Node.js",
+        "Google Cloud",
+        "PostgreSQL",
+      ],
+      imageSrc: "syncora.JPG",
       imageAlt: "Syncora Project Thumbnail",
-      demoLink: "https://www.syncora.com/",
+      demoLink: "https://syncora.music/",
     },
   ];
 
