@@ -22,7 +22,7 @@ function Skills() {
     },
     {
       category: "Databases",
-      items: ["Postgres", "SQL", "AWS", "Supabase"],
+      items: ["Postgres", "SQL", "AWS", "Supabase", "Google Cloud"],
       color: "bg-red-500",
       textColor: "text-red-500",
     },

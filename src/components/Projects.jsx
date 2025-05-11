@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Syncora: Music Streaming Platform",
       description: [
         "Built a music streaming platform allowing artists to upload, manage, and share their music with a dynamic audio playback system.",
-        "Engineered a cloud-based file storage system (AWS S3 / Cloudflare R2) to handle audio uploads and real-time streaming efficiently.",
+        "Engineered a cloud-based file storage system (Google Cloud) to handle audio uploads and real-time streaming efficiently.",
         "Implemented algorithm-driven features for smart music organization, playlist recommendations, and search optimization.",
       ],
       technologies: [
