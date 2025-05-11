@@ -7,11 +7,11 @@ const Experience = () => {
       date: "December 2024 - Present",
       image: "w.png",
       description: [
-        "Developed custom, user-centric web applications for clients, ensuring optimal performance and easy user experience.",
-        "Implemented responsive and accessible design principles, ensuring compatibility across devices and adherence to industry practices.",
-        "Maintained clear documentation and provided ongoing support, resulting in long-term client relationships and repeat business.",
+        "Built and maintained full-stack web applications, integrating modern front-end frameworks with scalable back-end services and RESTful APIs.",
+        "Engineered responsive UIs with React and Tailwind CSS, and implemented backend logic, authentication, and database operations using PostgreSQL.",
+        "Emphasized clean architecture, reusable components, and version-controlled workflows to ensure code quality, collaboration, and long-term project success.",
       ],
-      technologies: ["React", "Tailwind", "JavaScript", "Python"],
+      technologies: ["React", "Tailwind", "JavaScript", "Python", "PostgreSQL"],
     },
   ];
 
