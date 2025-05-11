@@ -6,7 +6,7 @@ Built with **React** and **Vite**, and styled using **Tailwind CSS**, it's desig
 
 ---
 
-## 🌐 Live Site
+## Live Site
 
 [wnzel.com](https://wnzel.com)
 
