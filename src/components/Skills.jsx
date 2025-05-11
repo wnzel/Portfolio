@@ -4,7 +4,15 @@ function Skills() {
   const skills = [
     {
       category: "Languages",
-      items: ["Python", "TypeScript", "JavaScript", "HTML", "CSS", "C++"],
+      items: [
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "C++",
+        "Java",
+      ],
       color: "bg-blue-500",
       textColor: "text-blue-500",
     },
