@@ -36,7 +36,13 @@ function Skills() {
     },
     {
       category: "Practices",
-      items: ["Agile", "Version Control", "Git", "Testing & Debugging"],
+      items: [
+        "Agile",
+        "Version Control",
+        "Git",
+        "Testing & Debugging",
+        "Figma",
+      ],
       color: "bg-purple-500",
       textColor: "text-purple-500",
     },

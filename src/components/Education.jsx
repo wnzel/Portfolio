@@ -29,7 +29,7 @@ const Education = () => {
               className="w-24 h-24 rounded-full border-2 border-gray-300 dark:border-gray-500"
             />
             <div className="ml-4">
-              <h3 className="text-2xl font-semibold mb-1">{edu.degree}</h3>
+              <h3 className="text-2xl font-semibold mb-0">{edu.degree}</h3>
               <p className="text-gray-700 dark:text-gray-300 text-lg">
                 {edu.institution}
               </p>

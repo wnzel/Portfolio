@@ -3,7 +3,8 @@ import React from "react";
 const Experience = () => {
   const experienceList = [
     {
-      title: "Freelance Developer",
+      title: "Software Engineer",
+      subtitle: "Freelance, Remote",
       date: "December 2024 - Present",
       image: "w.png",
       description: [
@@ -29,8 +30,11 @@ const Experience = () => {
                 className="w-24 h-24 rounded-full border-2 border-gray-300 dark:border-gray-500"
               />
               <div className="ml-4">
-                <h3 className="text-2xl font-semibold mb-1">{exp.title}</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-lg mb-1">
+                <h3 className="text-2xl font-semibold mb-0">{exp.title}</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-lg">
+                  {exp.subtitle}
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 text-base">
                   {exp.date}
                 </p>
               </div>

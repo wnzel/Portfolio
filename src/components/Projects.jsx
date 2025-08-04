@@ -35,7 +35,7 @@ const Projects = () => {
       ],
       imageSrc: "syncora.JPG",
       imageAlt: "Syncora Project Thumbnail",
-      demoLink: "https://syncora.music/",
+      demoLink: "https://syncora-git-main-wnzels-projects.vercel.app/",
     },
   ];
 
