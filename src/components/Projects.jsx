@@ -33,7 +33,7 @@ const Projects = () => {
         "Google Cloud",
         "PostgreSQL",
       ],
-      imageSrc: "syncora.JPG",
+      imageSrc: "syncorawebsite.JPG",
       imageAlt: "Syncora Project Thumbnail",
       demoLink: "https://syncora-git-main-wnzels-projects.vercel.app/",
     },
