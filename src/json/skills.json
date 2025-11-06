@@ -1,0 +1,25 @@
+{
+  "Frontend": [
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind",
+    "daisyUI",
+    "HTML",
+    "CSS"
+  ],
+  "Backend": ["Bun", "Hono", "Node.js", "Python", "FastAPI", "Next.js"],
+  "Database": ["Supabase", "AWS", "PostgreSQL", "Google Cloud"],
+  "Tools & Others": [
+    "Git",
+    "Docker",
+    "Railway",
+    "DigitalOcean",
+    "Figma",
+    "Vite",
+    "GitHub",
+    "Cloudflare",
+    "Vercel",
+    "VS Code"
+  ]
+}

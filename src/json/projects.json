@@ -1,0 +1,229 @@
+[
+  {
+    "id": 1,
+    "title": "Syncora",
+    "slug": "Syncora",
+    "techstack": [
+      "React",
+      "TypeScript",
+      "Bun",
+      "Hono",
+      "Tailwind",
+      "Supabase",
+      "Docker"
+    ],
+    "description": [
+      "Music streaming platform for artists to upload and for listeners to listen."
+    ],
+    "detailed": {
+      "overview": "Music streaming platform focused on independent artists. Users can upload tracks, build playlists, follow artists, and join conversations around songs and samples. Built with React + TypeScript on Bun/Hono, Supabase for auth/storage/security, and a mobile UI.",
+
+      "motivation": "I wanted a cleaner, community centered alternative to mainstream platforms. Something that highlights underground artists, sample culture, and thoughtful discovery without all of the algorithms",
+
+      "features": [
+        "Artist uploads with Supabase Storage",
+        "Playlists, likes, reposts, and follows with UI updates",
+        "Community reviews and ratings with user profiles and activity feeds",
+        "Role-based permissions and Supabase RLS for secure multi-tenant data"
+      ],
+
+      "colors": {
+        "dark": ["#090b10", "#e1e3e3", "#3974da", "#272a32", "#9ca1a5"],
+        "light": ["#ffffff", "#090b10", "#3974da", "#e1e3e3", "#3d4149"]
+      },
+      "images": [
+        {
+          "dark": "/syncora/syncora-1.JPG",
+          "light": "/syncora/syncora-1.JPG"
+        },
+        {
+          "dark": "/syncora/syncora-2.JPG",
+          "light": "/syncora/syncora-2.JPG"
+        },
+        {
+          "dark": "/syncora/syncora-3.png",
+          "light": "/syncora/syncora-3.png"
+        },
+        {
+          "dark": "/syncora/syncora-4.JPG",
+          "light": "/syncora/syncora-4.JPG"
+        },
+        {
+          "dark": "/syncora/syncora-5.JPG",
+          "light": "/syncora/syncora-5.JPG"
+        },
+        {
+          "dark": "/syncora/syncora-6.JPG",
+          "light": "/syncora/syncora-6.JPG"
+        }
+      ]
+    },
+    "img": {
+      "dark": "/syncora/syncorawebsite.JPG",
+      "light": "/syncora/syncorawebsite.JPG"
+    },
+    "site": "https://syncora-wnzels-projects.vercel.app/",
+    "source": "https://github.com/wnzel/syncora"
+  },
+
+  {
+    "id": 2,
+    "title": "Baller Props",
+    "slug": "baller-props",
+    "techstack": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "Python",
+      "FastAPI",
+      "Docker"
+    ],
+    "description": [
+      "Sports data research tool using prop lines from online sportsbooks."
+    ],
+    "detailed": {
+      "overview": "A sports betting research tool for NBA and WNBA prop lines. Aggregates data from multiple sportsbooks and provides statistical analysis to streamline research that would otherwise require lots of browser tabs.",
+
+      "motivation": "Researching sports props required manually comparing data across multiple sportsbooks and ESPN, leading to a ton of open tabs and no way to track stats efficiently. Existing tools were overpriced for occasional betting, so I built a streamlined alternative focused on data aggregation and easy comparison.",
+
+      "features": [
+        "Scrapes prop lines from PrizePicks, Underdog, and DraftKings",
+        "Sortable and filterable tables for quick prop discovery",
+        "Statistical analysis including L10 averages, hit rate percentages, and head to head data",
+        "Compare odds across sportsbooks to find the best lines",
+        "Historical season data dating back to 2023",
+        "Custom backend using FastAPI and a forked nba_api library for extended data coverage"
+      ],
+      "colors": ["#0A0B0B", "#FFFEFE", "#0385C7", "#359861", "#982526"],
+      "images": [
+        "/ballerprops/baller-props.avif",
+        "/ballerprops/baller-props-2.avif",
+        "/ballerprops/baller-props-3.avif",
+        "/ballerprops/baller-props-4.avif",
+        "/ballerprops/baller-props-5.avif"
+      ]
+    },
+    "img": "ballerprops/baller-props.avif",
+    "site": "https://ballerprops.com/",
+    "source": "https://github.com/wnzel/baller-props"
+  },
+
+  {
+    "id": 3,
+    "slug": "convenient-convert",
+    "title": "Convenient Convert",
+    "techstack": ["React", "TypeScript", "Node.js", "Tailwind"],
+    "description": [
+      "File conversion tool for audio, images, documents, and video."
+    ],
+
+    "detailed": {
+      "overview": "File conversion web app with multiple converting options with a simple drag and drop UX. Converts audio, image, document, and video formats quickly.",
+
+      "motivation": "Most online converters are spammy or limit formats. I wanted a clean and trustworthy tool I could share with friends that just works fast and private",
+
+      "features": [
+        "Batch uploads with background queue and progress tracking",
+        "Audio/Image/Document/Video presets",
+        "Error handling and resumable uploads"
+      ],
+
+      "colors": {
+        "dark": ["#0F1210", "#ffffff", "#22B35E", "#3A83F6"],
+        "light": ["#ffffff", "#09090B", "#22B35E", "#3A83F6"]
+      },
+      "images": [
+        {
+          "dark": "/convenientconvert/cc.JPG",
+          "light": "/convenientconvert/ccwhite.JPG"
+        },
+        {
+          "dark": "/convenientconvert/cc2.JPG",
+          "light": "/convenientconvert/ccwhite2.JPG"
+        },
+        {
+          "dark": "/convenientconvert/cc3.JPG",
+          "light": "/convenientconvert/ccwhite3.JPG"
+        },
+        {
+          "dark": "/convenientconvert/cc4.JPG",
+          "light": "/convenientconvert/ccwhite4.JPG"
+        }
+      ]
+    },
+
+    "img": {
+      "dark": "convenientconvert/cc5.JPG",
+      "light": "convenientconvert/ccwhitesmall.JPG"
+    },
+    "site": "https://www.convenientconvert.com/",
+    "source": "https://github.com/wnzel/Convenient-Convert"
+  },
+
+  {
+    "id": 4,
+    "title": "Syncora Waitlist",
+    "slug": "syncora-waitlist",
+    "techstack": ["React", "TypeScript", "Next.js", "Supabase", "Tailwind"],
+    "description": [
+      "Landing + waitlist for Syncora with verified email capture to sign up."
+    ],
+    "detailed": {
+      "overview": "A site for future users to sign up with their email for be notified for release day of Syncora.",
+
+      "motivation": "I wanted a waitlist with security and analytics so I could collect information to notify users for the release date of Syncora.",
+
+      "features": [
+        "Email capture with Supabase",
+        "Admin dashboard: signups over time, conversion, and sources",
+        "Responsive Tailwind UI, dark/light theming, and fast TTFB",
+        "Multiple languages supported (English, Spanish, Japanese, etc.)"
+      ],
+
+      "colors": {
+        "dark": ["#272627", "#FFFFFF"],
+        "light": ["#FFFFFF", "#000101"]
+      },
+      "images": [
+        {
+          "dark": "/syncorawaitlist/syncorasite.JPG",
+          "light": "/syncorawaitlist/syncorasite.JPG"
+        },
+        {
+          "dark": "/syncorawaitlist/syncora2.JPG",
+          "light": "/syncorawaitlist/syncora2.JPG"
+        },
+        {
+          "dark": "/syncorawaitlist/syncora4.JPG",
+          "light": "/syncorawaitlist/syncora4.JPG"
+        }
+      ]
+    },
+    "img": {
+      "dark": "syncorawaitlist/syncorasmall.JPG",
+      "light": "syncorawaitlist/syncorasmall.JPG"
+    },
+    "site": "https://syncora.site",
+    "source": "https://github.com/wnzel/syncora-waitlist"
+  },
+
+  {
+    "id": 5,
+    "title": "Portfolio",
+    "techstack": ["React", "JavaScript", "Node.js", "Tailwind"],
+    "description": ["You're on it right now :)"],
+    "site": "https://wnzel.com",
+    "source": "https://github.com/wnzel/portfolio"
+  },
+
+  {
+    "id": 6,
+    "title": "Facial Controller for Gaming",
+    "techstack": ["Python"],
+    "description": [
+      "Controller for Disabled People to play video games using face movements"
+    ],
+    "source": "https://github.com/wnzel/Facial-Controller"
+  }
+]

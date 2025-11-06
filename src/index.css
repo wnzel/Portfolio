@@ -1,0 +1,13 @@
+@import "@fontsource-variable/source-sans-3";
+@import "tailwindcss";
+
+@import "./daisyui.css";
+
+html {
+  scrollbar-gutter: stable;
+}
+
+/* Segoe UI */
+body {
+  font-family: "Source Sans 3 Variable", "Segoe UI", sans-serif;
+}
