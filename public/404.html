@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Redirecting…</title>
+    <script>
+      // SPA fallback: fetch index.html and replace the document so the client-side router
+      // can handle the current URL. Works on Cloudflare Pages, GitHub Pages, Netlify, etc.
+      (function () {
+        try {
+          const url = "/index.html";
+          fetch(url)
+            .then(function (r) {
+              if (!r.ok) throw new Error("index fetch failed");
+              return r.text();
+            })
+            .then(function (html) {
+              // Replace current document with index.html content
+              document.open();
+              document.write(html);
+              // Keep the current URL so the SPA router can pick it up
+              history.replaceState(
+                {},
+                "",
+                location.pathname + location.search + location.hash
+              );
+              document.close();
+            })
+            .catch(function () {
+              // If fetching index fails, show a simple message
+              document.body.innerHTML =
+                '<h1>Page not found</h1><p>Please return to the <a href="/">home page</a>.</p>';
+            });
+        } catch (e) {
+          document.body.innerHTML =
+            '<h1>Page not found</h1><p>Please return to the <a href="/">home page</a>.</p>';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting…</p>
+  </body>
+</html>
