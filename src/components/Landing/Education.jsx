@@ -75,7 +75,7 @@ function Education() {
               </span>
             </div>
             <p className="text-sm text-base-content/70 font-light">
-              A.A. in Computer Science
+              A.S. in Computer Science
             </p>
           </div>
         </div>
