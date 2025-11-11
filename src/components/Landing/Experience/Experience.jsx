@@ -82,9 +82,8 @@ function Experience() {
               <div className="flex items-baseline">
                 <span className="text-base-content/50 mr-1">•</span>
                 <p className="text-sm text-base-content/70 font-light">
-                  Developed and Designed full-stack web applications, using
-                  front-end frameworks with back-end services and while using
-                  external APIs.
+                  Deploy and update client websites using cloud hosting and
+                  CI/CD workflows.
                 </p>
               </div>
               <div className="flex items-baseline">
@@ -98,8 +97,8 @@ function Experience() {
               <div className="flex items-baseline">
                 <span className="text-base-content/50 mr-1">•</span>
                 <p className="text-sm text-base-content/70 font-light">
-                  Emphasized clean architecture, reusable components for
-                  workflows to ensure code quality and collaboration.
+                  Authentication and security systems protecting user privacy
+                  and ensuring secure access.
                 </p>
               </div>
             </div>

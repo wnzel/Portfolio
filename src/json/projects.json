@@ -207,9 +207,63 @@
     "site": "https://syncora.site",
     "source": "https://github.com/wnzel/syncora-waitlist"
   },
-
   {
     "id": 5,
+    "title": "Polyview",
+    "slug": "polyview",
+    "techstack": ["React", "Typescript", "Node.js", "Bun"],
+    "description": [
+      "Polymarket Analytics and Research Tool for Trending Markets"
+    ],
+    "detailed": {
+      "overview": "Polymarket analytics and research tool that visualizes prediction markets through charts, news feeds, and trade tracking. Users can interact with a Claude-integrated chatbot to explore probabilities, forecast outcomes, and uncover emerging market trends.",
+
+      "motivation": "Built during a 24-hour hackathon with a 3-person team, our goal was to make Polymarket data more intuitive for newcomers. We wanted to create a platform where anyone could understand market sentiment and activity through AI-enhanced insights, interactive charts, and live trade data for better decision making.",
+
+      "features": [
+        "Claude AI integration that included related articles and charts in the chat analysis and summaries",
+        "Live Market Charts for Polymarket visualization",
+        "Recent Trades feed displaying active buy/sell data",
+        "News with article recommendations tied to chat topics",
+        "WebSocket-based updates and MediaSocket support for live data streaming"
+      ],
+
+      "colors": {
+        "dark": ["#000000", "#0A0A0A", "#FFFFFF"],
+        "light": ["#FFFFFF", "#000101"]
+      },
+      "images": [
+        {
+          "dark": "/polyview/polyview1.JPG",
+          "light": "/polyview/polyview1.JPG"
+        },
+        {
+          "dark": "/polyview/polyview2.JPG",
+          "light": "/polyview/polyview2.JPG"
+        },
+        {
+          "dark": "/polyview/polyview3.JPG",
+          "light": "/polyview/polyview3.JPG"
+        },
+        {
+          "dark": "/polyview/polyview4.JPG",
+          "light": "/polyview/polyview4.JPG"
+        },
+        {
+          "dark": "/polyview/polyview5.JPG",
+          "light": "/polyview/polyview5.JPG"
+        }
+      ]
+    },
+    "img": {
+      "dark": "/polyview/polysmall.JPG",
+      "light": "/polyview/polysmall.JPG"
+    },
+    "site": "https://polymarket-mcp-chatbot-im9s.vercel.app/",
+    "source": "https://github.com/wnzel/Polyview"
+  },
+  {
+    "id": 6,
     "title": "Portfolio",
     "techstack": ["React", "JavaScript", "Node.js", "Tailwind"],
     "description": ["You're on it right now :)"],
@@ -218,9 +272,9 @@
   },
 
   {
-    "id": 6,
+    "id": 7,
     "title": "Facial Controller for Gaming",
-    "techstack": ["Python"],
+    "techstack": ["Python", "OpenCV", "Mediapipe"],
     "description": [
       "Controller for Disabled People to play video games using face movements"
     ],

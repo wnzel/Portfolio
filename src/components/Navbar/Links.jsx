@@ -5,10 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 
 const projectNames = {
-  saveslot: "Syncora",
+  syncora: "Syncora",
   "baller-props": "Baller Props",
-  "yard-ledger": "Yard Ledger",
-  "coin-expo": "Coin Expo",
+  "convenient-convert": "Convenient Convert",
 };
 
 function Links({ navItems }) {
