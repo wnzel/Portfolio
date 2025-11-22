@@ -125,7 +125,7 @@ function Landing() {
           <span className="font-medium text-base-content border-b border-base-content/20 hover:border-base-content/60 transition-colors tooltip tooltip-top">
             <span className="dropdown dropdown-hover dropdown-top dropdown-center cursor-pointer"></span>
           </span>{" "}
-          Specializing in Python and JavaScript.
+        Specializing in Python and JavaScript.
         </p>
       </div>
 
