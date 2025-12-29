@@ -66,7 +66,7 @@ function Experience() {
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-1">
                 <h3 className="text-base font-medium text-base-content tracking-tight">
-                  Software Developer
+                  Software Engineer
                 </h3>
                 <span className="text-xs text-base-content/50 font-light">
                   December 2024 &#45; Present
