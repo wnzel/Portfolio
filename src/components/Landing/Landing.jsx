@@ -71,7 +71,7 @@ function Landing() {
               </div>
             </div>
             <p className="text-base font-light text-base-content/70">
-              Software Developer
+              Software Engineer
             </p>
           </div>
 
