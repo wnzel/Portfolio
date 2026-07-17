@@ -60,7 +60,6 @@ function ProjectCard({ project, index }) {
     };
   }, []);
 
-  const showColor = true; // Always color
   const isRamenGames = project.title.toLowerCase().includes("ramen");
   const hasDetails = project.slug && project.detailed;
 

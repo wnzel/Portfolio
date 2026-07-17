@@ -5,11 +5,21 @@ import projectsData from "@/json/projects.json";
 import FeaturedCard from "./FeaturedCard";
 import { motion, useInView, useAnimation } from "framer-motion";
 
+const featuredTechStacks = {
+  Syncora: ["React", "TypeScript", "Bun", "Supabase"],
+  "Baller Props": ["React", "TypeScript", "Supabase", "Python"],
+};
+
 function FeaturedProjects() {
   const [featuredProjects, setFeaturedProjects] = useState([]);
 
   useEffect(() => {
-    const featured = projectsData.slice(0, 3);
+    const featured = projectsData
+      .filter((project) => ["Syncora", "Baller Props"].includes(project.title))
+      .map((project) => ({
+        ...project,
+        techstack: featuredTechStacks[project.title],
+      }));
     setFeaturedProjects(featured);
   }, []);
 
@@ -33,7 +43,7 @@ function FeaturedProjects() {
       initial="hidden"
       animate={mainControls}
       transition={{ duration: 0.4 }}
-      className="px-4 flex flex-col gap-8"
+      className="flex flex-col gap-8 px-4 md:w-[736px] md:self-center"
     >
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -50,9 +60,9 @@ function FeaturedProjects() {
       </div>
 
       {/* projects */}
-      <div className="flex flex-col gap-6">
-        {featuredProjects.map((project, index) => (
-          <FeaturedCard key={project.id} project={project} index={index} />
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {featuredProjects.map((project) => (
+          <FeaturedCard key={project.id} project={project} />
         ))}
       </div>
     </motion.div>

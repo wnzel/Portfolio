@@ -6,7 +6,7 @@ import SpotifyNowPlaying from "@/components/SpotifyWidget/SpotifyWidget";
 function Home() {
   return (
     <>
-      <div className="min-h-screen bg-base-100 flex flex-col gap-8">
+      <div className="min-h-screen flex flex-col gap-8">
         <Landing />
         <FeaturedProjects />
         <Skills />
