@@ -1,7 +1,8 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
-function Education() {
+function Education({ showHeading = true }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -24,10 +25,11 @@ function Education() {
       transition={{ duration: 0.4 }}
       className="flex flex-col gap-8"
     >
-      {/* Header */}
-      <h2 className="text-lg font-medium text-base-content tracking-tight">
-        Education
-      </h2>
+      {showHeading && (
+        <h2 className="text-lg font-medium text-base-content tracking-tight">
+          Education
+        </h2>
+      )}
 
       {/* Arizona State University card */}
       <div className="border border-base-content/20 bg-base-100 p-6">
@@ -83,5 +85,9 @@ function Education() {
     </motion.div>
   );
 }
+
+Education.propTypes = {
+  showHeading: PropTypes.bool,
+};
 
 export default Education;

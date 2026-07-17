@@ -128,7 +128,7 @@ export function ProjectDetails({ projectSlug }) {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-base-100 flex items-center justify-center px-4">
+      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] md:self-center">
         <div className="text-center space-y-4">
           <p className="text-base-content font-light">Project not found</p>
           <Link
@@ -145,7 +145,7 @@ export function ProjectDetails({ projectSlug }) {
 
   if (!project.detailed) {
     return (
-      <div className="min-h-screen bg-base-100 flex items-center justify-center px-4">
+      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] md:self-center">
         <div className="text-center space-y-4">
           <p className="text-base-content font-light">
             Detailed information coming soon
@@ -163,8 +163,8 @@ export function ProjectDetails({ projectSlug }) {
   }
 
   return (
-    <div className="min-h-screen bg-base-100">
-      <div className="max-w-3xl mx-auto px-4 py-8 space-y-12">
+    <main className="min-h-screen w-full px-4 py-8 md:w-[736px] md:self-center">
+      <div className="space-y-12">
         {/* Back Link */}
         <Link
           to="/projects"
@@ -237,7 +237,7 @@ export function ProjectDetails({ projectSlug }) {
           delay={0.3}
         />
       </div>
-    </div>
+    </main>
   );
 }
 
