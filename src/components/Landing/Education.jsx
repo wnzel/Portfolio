@@ -47,7 +47,7 @@ function Education({ showHeading = true }) {
                 Arizona State University
               </h3>
               <span className="text-xs text-base-content/50 font-light">
-                2024 &#45; 2026
+                2024 &#45; 2027
               </span>
             </div>
             <p className="text-sm text-base-content/70 font-light">

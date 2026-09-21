@@ -22,7 +22,7 @@ function CareerTabs() {
 
   return (
     <section
-      className="flex flex-col gap-3 md:w-[704px] md:self-center"
+      className="flex flex-col gap-3 w-full"
       aria-label="Career history"
     >
       <div

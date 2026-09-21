@@ -18,4 +18,8 @@ export default defineConfig({
       "@": path.resolve("src"),
     },
   },
+  server: {
+    port: 3001,
+    host: true,
+  },
 });

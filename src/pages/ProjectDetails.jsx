@@ -128,7 +128,7 @@ export function ProjectDetails({ projectSlug }) {
 
   if (!project) {
     return (
-      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] md:self-center">
+      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] mx-auto">
         <div className="text-center space-y-4">
           <p className="text-base-content font-light">Project not found</p>
           <Link
@@ -145,7 +145,7 @@ export function ProjectDetails({ projectSlug }) {
 
   if (!project.detailed) {
     return (
-      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] md:self-center">
+      <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] mx-auto">
         <div className="text-center space-y-4">
           <p className="text-base-content font-light">
             Detailed information coming soon
@@ -163,7 +163,7 @@ export function ProjectDetails({ projectSlug }) {
   }
 
   return (
-    <main className="min-h-screen w-full px-4 py-8 md:w-[736px] md:self-center">
+    <main className="min-h-screen w-full px-4 py-8 md:w-[736px] mx-auto">
       <div className="space-y-12">
         {/* Back Link */}
         <Link

@@ -22,7 +22,14 @@ function SkillItem({ skill, index, isInitiallyVisible = true }) {
   };
 
   const lightInvert = (skillName) => {
-    const invertList = ["Express", "Vercel", "GitHub", "Railway"];
+    const invertList = [
+      "Express",
+      "Vercel",
+      "GitHub",
+      "Railway",
+      "LLMs",
+      "Machine Learning",
+    ];
     return invertList.includes(skillName);
   };
 
@@ -84,6 +91,9 @@ function SkillItem({ skill, index, isInitiallyVisible = true }) {
             <div className="w-6 h-6 flex items-center justify-center">
               <img
                 src={`/skills/${iconFile(skill)}.svg`}
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
                 className={`max-w-full max-h-full object-contain ${
                   darkInvert(skill) ? "[html[data-theme='dark']_&]:invert" : ""
                 } ${lightInvert(skill) ? "invert [html[data-theme='dark']_&]:invert-0" : ""}`}

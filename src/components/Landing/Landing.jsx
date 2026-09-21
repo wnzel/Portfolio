@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faXTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { motion, useInView, useAnimation } from "framer-motion";
 import WeatherWidget from "../WeatherWidget/WeatherWidget";
 import CareerTabs from "./CareerTabs";
+import PhotoCardStack from "./PhotoCardStack";
 
 function Landing() {
   const ref = useRef(null);
@@ -27,7 +32,7 @@ function Landing() {
       initial="hidden"
       animate={mainControls}
       transition={{ duration: 0.4 }}
-      className="flex flex-col gap-6 px-4 md:w-[736px] md:self-center"
+      className="flex flex-col gap-6 px-4 w-full md:w-[736px] md:self-center"
     >
       {/* About */}
       <section className="grid grid-cols-[minmax(0,1fr)_108px] items-center gap-4 sm:grid-cols-[minmax(0,1fr)_152px] sm:gap-8">
@@ -50,13 +55,13 @@ function Landing() {
               <div
                 tabIndex={0}
                 role="button"
-                className="inline-flex items-center text-base text-base-content/70 transition-colors hover:text-base-content sm:text-lg"
+                className="inline-flex items-center text-base text-base-content/70 transition-colors hover:text-base-content sm:text-lg cursor-pointer"
               >
                 Phoenix, AZ 📍
               </div>
               <div
                 tabIndex={0}
-                className="dropdown-content z-1 p-2 shadow bg-base-100 rounded-box mt-2 outline outline-base-content/20"
+                className="dropdown-content z-30 p-2 shadow-lg bg-base-100 rounded-box mt-2 outline outline-base-content/20"
               >
                 <WeatherWidget />
               </div>
@@ -66,11 +71,17 @@ function Landing() {
             </p>
           </div>
 
-          <p className="max-w-xl text-sm font-light leading-relaxed text-base-content/70 sm:text-base">
-            Computer Science student at Arizona State University. I’m interested
-            in AI tooling and distributed systems, especially building automation
-            workflows, developer tools, and reliable backend services.
-          </p>
+          <div className="max-w-xl text-sm font-light leading-relaxed text-base-content/70 sm:text-base flex flex-col gap-2">
+            <p>
+              I am a senior Computer Science student at Arizona State University focused on
+              full-stack development, building web, mobile, and desktop software with modern
+              technologies.
+            </p>
+            <p>
+              I’m also interested in machine learning, AI tooling, backend systems, and
+              internal tools for workflow automation.
+            </p>
+          </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <a
@@ -91,11 +102,13 @@ function Landing() {
               <FontAwesomeIcon className="text-xl" icon={faLinkedin} />
             </a>
             <a
-              href="mailto:wenzelescudero@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://x.com/wnzeldev"
               className="text-base-content hover:text-base-content/60 transition-colors"
-              aria-label="Email"
+              aria-label="X"
             >
-              <FontAwesomeIcon className="text-xl" icon={faEnvelope} />
+              <FontAwesomeIcon className="text-xl" icon={faXTwitter} />
             </a>
             <a
               target="_blank"
@@ -106,15 +119,18 @@ function Landing() {
             >
               <FontAwesomeIcon className="text-xl" icon={faGithub} />
             </a>
+            <a
+              href="mailto:wenzelescudero@gmail.com"
+              className="text-base-content hover:text-base-content/60 transition-colors"
+              aria-label="Email"
+            >
+              <FontAwesomeIcon className="text-xl" icon={faEnvelope} />
+            </a>
           </div>
         </div>
 
-        <div className="justify-self-end overflow-hidden border border-base-content/20 bg-base-100 shadow-sm">
-          <img
-            src="/wenzel.jpg"
-            className="aspect-[4/5] w-[108px] object-cover object-top sm:w-[152px]"
-            alt="Wenzel Escudero headshot"
-          />
+        <div className="justify-self-end">
+          <PhotoCardStack />
         </div>
       </section>
 

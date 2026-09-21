@@ -43,7 +43,7 @@ function FeaturedProjects() {
       initial="hidden"
       animate={mainControls}
       transition={{ duration: 0.4 }}
-      className="flex flex-col gap-8 px-4 md:w-[736px] md:self-center"
+      className="flex flex-col gap-8 px-4 w-full md:w-[736px] md:self-center"
     >
       {/* Header */}
       <div className="flex items-center justify-between">

@@ -3,7 +3,7 @@ import projects from "@/json/projects.json";
 
 function Projects() {
   return (
-    <div className="w-full px-4 py-8 md:w-[736px] md:self-center">
+    <div className="w-full px-4 py-8 md:w-[736px] mx-auto">
       <div className="grid grid-cols-1 gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />

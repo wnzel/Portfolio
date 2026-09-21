@@ -3,18 +3,21 @@ import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
 const automationInternship = {
-  title: "Software Engineer Intern",
+  title: "Forward Deployed Engineer Intern",
   organization: "The Automation Interns",
   location: "Tempe, Arizona",
   dates: "May 2026 - Present",
   logo: "/experience/automation-interns.png",
   logoAlt: "The Automation Interns",
+  description:
+    "Built internal tools and AI-powered automation for a corporate client, working across recruiting, finance, accounting, and operations.",
   bullets: [
-    "Reduced administrative burden by 40%+ across client operations by deploying Claude (Anthropic API) and Python automation workflows to eliminate repetitive tasks and enable teams to focus on higher-value work within Cowork environments.",
-    "Cut candidate screening time by 3x by building an LLM-powered recruiting chatbot and resume parser integrated with Gmail OAuth, Google Workspace, Microsoft 365, and PostgreSQL for structured, repeatable task execution with precision and consistency.",
-    "Drove AI tool adoption among 5+ executives by delivering weekly Claude education sessions, drafting summaries, reports, and emails to operationalize AI-assisted productivity and digital productivity workflows across enterprise applications.",
+    "Built an LLM-powered recruiting assistant and resume workflow to help streamline candidate screening and internal recruiting tasks.",
+    "Developed agentic tools and automated workflows for teams across finance, accounting, and operations, supporting roughly 28 employees.",
+    "Set up and maintained internal infrastructure using Mac minis, Docker, and self-hosted services for running tools and databases.",
+    "Led AI automation sessions for employees and executives, teaching practical ways to use Claude, LLM tools, and agentic workflows in their day-to-day work.",
   ],
-  skills: ["React", "Python", "Docker", "JavaScript", "PostgreSQL", "Claude API"],
+  skills: ["Python", "React", "Docker", "PostgreSQL", "Claude API", "LLMs"],
 };
 
 const freelanceExperience = {
@@ -22,12 +25,14 @@ const freelanceExperience = {
   organization: "Freelance",
   location: "Remote",
   dates: "December 2024 - Present",
+  description:
+    "Built and maintained websites for small businesses and independent clients, handling development, deployment, and ongoing updates.",
   bullets: [
-    "Deploy and update client websites using cloud hosting and CI/CD workflows.",
-    "Built business websites that allowed small companies to manage their online presence, showcasing store locations, hours, and service details with easy-to-use layouts.",
-    "Built authentication and security systems that protect user privacy and ensure secure access.",
+    "Built business and portfolio websites using modern frontend and backend technologies.",
+    "Deployed and maintained client websites, including hosting, updates, and CI/CD workflows.",
+    "Worked on authentication, security, databases, and backend features depending on each project’s needs.",
   ],
-  skills: ["React", "Tailwind", "JavaScript", "Python", "PostgreSQL"],
+  skills: ["React", "Tailwind", "JavaScript", "Python", "PostgreSQL", "CI/CD"],
 };
 
 const builderClubActivity = {
@@ -37,10 +42,15 @@ const builderClubActivity = {
   dates: "March 2026 - Present",
   logo: "/experience/claude-builder-club.png",
   logoAlt: "Claude Builder Club by Anthropic",
+  description:
+    "Help lead the Claude Builder Club at ASU, working with a student team to organize events, build club infrastructure, and teach students about AI development.",
   bullets: [
-    "Automated Claude API access for 60+ student members by architecting a provisioning platform with multi-layer fraud detection, institutional email validation, and geolocation verification, eliminating manual onboarding overhead.",
-    "Grew the club site to 20,000+ organic sessions with 100% Core Web Vitals by leading the technical direction of a 60+ member AI organization and mentoring engineers on LLM tooling and agentic workflows.",
+    "Help organize hackathons, workshops, and Claude-focused events for students.",
+    "Work with a 10+ person team to build and maintain the club website, hackathon portal, and other internal systems.",
+    "Teach students how to use Claude, LLM tools, and agentic workflows through workshops and hands-on sessions.",
+    "Help coordinate the club’s relationship with Anthropic and support the broader student community around AI development.",
   ],
+  skills: ["Claude", "LLMs", "React", "Hackathons", "Leadership"],
 };
 
 function renderExperienceCard(entry, logoSrc) {
@@ -48,7 +58,7 @@ function renderExperienceCard(entry, logoSrc) {
     <article className="border border-base-content/20 bg-base-100 px-5 pb-7 pt-5 sm:px-6 sm:pb-8 sm:pt-6">
       <div className="flex items-center gap-4 sm:gap-6">
         {entry.logo ? (
-          <div className="h-16 w-16 shrink-0 sm:h-20 sm:w-20">
+          <div className="h-14 w-14 shrink-0 sm:h-16 sm:w-16">
             <img
               src={entry.logo}
               alt={entry.logoAlt}
@@ -57,7 +67,7 @@ function renderExperienceCard(entry, logoSrc) {
             />
           </div>
         ) : (
-          <div className="h-16 w-16 shrink-0 sm:h-20 sm:w-20">
+          <div className="h-14 w-14 shrink-0 sm:h-16 sm:w-16">
             <img
               src={logoSrc}
               alt="Freelance"
@@ -87,14 +97,22 @@ function renderExperienceCard(entry, logoSrc) {
         </div>
       </div>
 
-      <ul className="mt-6 flex list-disc flex-col gap-2 pl-5 text-sm font-light leading-relaxed text-base-content/70 marker:text-base-content/40">
-        {entry.bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
-        ))}
-      </ul>
+      {entry.description && (
+        <p className="mt-4 text-sm font-light leading-relaxed text-base-content/70">
+          {entry.description}
+        </p>
+      )}
+
+      {entry.bullets?.length > 0 && (
+        <ul className="mt-3 flex list-disc flex-col gap-2 pl-5 text-sm font-light leading-relaxed text-base-content/70 marker:text-base-content/40">
+          {entry.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      )}
 
       {entry.skills?.length > 0 && (
-        <div className="mt-6 flex flex-wrap gap-2" aria-label="Tools and technologies">
+        <div className="mt-5 flex flex-wrap gap-2" aria-label="Tools and technologies">
           {entry.skills.map((skill) => (
             <span
               key={skill}
@@ -165,11 +183,13 @@ function Experience({ showHeading = true }) {
         )}
       </div>
 
-      <h2 className="mt-2 text-lg font-medium tracking-tight text-base-content">
-        Activities
-      </h2>
+      <div>
+        <h2 className="text-lg font-medium tracking-tight text-base-content mb-3">
+          Extracurriculars
+        </h2>
 
-      {renderExperienceCard(builderClubActivity)}
+        {renderExperienceCard(builderClubActivity)}
+      </div>
     </motion.section>
   );
 }

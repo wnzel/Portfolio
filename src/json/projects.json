@@ -157,58 +157,12 @@
       "dark": "convenientconvert/cc5.JPG",
       "light": "convenientconvert/ccwhitesmall.JPG"
     },
-    "site": "https://www.convenientconvert.com/",
+    "site": "https://convenient-convert-747c3ig0k-wnzels-projects.vercel.app/",
     "source": "https://github.com/wnzel/Convenient-Convert"
   },
 
   {
     "id": 4,
-    "title": "Syncora Waitlist",
-    "slug": "syncora-waitlist",
-    "techstack": ["React", "TypeScript", "Next.js", "Supabase", "Tailwind"],
-    "description": [
-      "Landing + waitlist for Syncora with verified email capture to sign up."
-    ],
-    "detailed": {
-      "overview": "A site for future users to sign up with their email for be notified for release day of Syncora.",
-
-      "motivation": "I wanted a waitlist with security and analytics so I could collect information to notify users for the release date of Syncora.",
-
-      "features": [
-        "Email capture with Supabase",
-        "Admin dashboard: signups over time, conversion, and sources",
-        "Responsive Tailwind UI, dark/light theming, and fast TTFB",
-        "Multiple languages supported (English, Spanish, Japanese, etc.)"
-      ],
-
-      "colors": {
-        "dark": ["#272627", "#FFFFFF"],
-        "light": ["#FFFFFF", "#000101"]
-      },
-      "images": [
-        {
-          "dark": "/syncorawaitlist/syncorasite.JPG",
-          "light": "/syncorawaitlist/syncorasite.JPG"
-        },
-        {
-          "dark": "/syncorawaitlist/syncora2.JPG",
-          "light": "/syncorawaitlist/syncora2.JPG"
-        },
-        {
-          "dark": "/syncorawaitlist/syncora4.JPG",
-          "light": "/syncorawaitlist/syncora4.JPG"
-        }
-      ]
-    },
-    "img": {
-      "dark": "syncorawaitlist/syncorasmall.JPG",
-      "light": "syncorawaitlist/syncorasmall.JPG"
-    },
-    "site": "https://syncora.site",
-    "source": "https://github.com/wnzel/syncora-waitlist"
-  },
-  {
-    "id": 5,
     "title": "Polyview",
     "slug": "polyview",
     "techstack": ["React", "Typescript", "Node.js", "Bun"],
@@ -263,7 +217,7 @@
     "source": "https://github.com/wnzel/Polyview"
   },
   {
-    "id": 6,
+    "id": 5,
     "title": "Portfolio",
     "techstack": ["React", "JavaScript", "Node.js", "Tailwind"],
     "description": ["You're on it right now :)"],
@@ -272,7 +226,7 @@
   },
 
   {
-    "id": 7,
+    "id": 6,
     "title": "Facial Controller for Gaming",
     "techstack": ["Python", "OpenCV", "Mediapipe"],
     "description": [

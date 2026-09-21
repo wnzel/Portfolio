@@ -8,18 +8,38 @@
     "HTML",
     "CSS"
   ],
-  "Backend": ["Bun", "Hono", "Node.js", "Python", "FastAPI", "Next.js"],
-  "Database": ["Supabase", "AWS", "PostgreSQL", "Google Cloud"],
+  "Backend": [
+    "Python",
+    "Next.js",
+    "Node.js",
+    "FastAPI",
+    "Bun",
+    "Hono"
+  ],
+  "Database": [
+    "Supabase",
+    "PostgreSQL",
+    "AWS",
+    "Google Cloud"
+  ],
   "Tools & Others": [
     "Git",
     "Docker",
+    "GitHub",
+    "VS Code",
+    "Vercel",
     "Railway",
     "DigitalOcean",
-    "Figma",
-    "Vite",
-    "GitHub",
     "Cloudflare",
-    "Vercel",
-    "VS Code"
+    "Figma"
+  ],
+  "AI & LLM Tools": [
+    "Claude",
+    "Claude API",
+    "DeepSeek",
+    "Codex",
+    "Antigravity",
+    "LLMs",
+    "Machine Learning"
   ]
 }
