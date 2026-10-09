@@ -6,7 +6,7 @@ const automationInternship = {
   title: "Forward Deployed Engineer Intern",
   organization: "The Automation Interns",
   location: "Tempe, Arizona",
-  dates: "May 2026 - Present",
+  dates: "May 2026 - October 2026",
   logo: "/experience/automation-interns.png",
   logoAlt: "The Automation Interns",
   description:

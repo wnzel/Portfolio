@@ -47,7 +47,7 @@ export function Lightbox({
             {/* image container */}
             <div className="relative shrink flex items-center justify-center w-full">
               <div
-                className="relative aspect-video touch-pan-y"
+                className="relative w-full touch-pan-y"
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
@@ -58,7 +58,7 @@ export function Lightbox({
                     key={`lightbox-${selectedImage}`}
                     src={getCurrentImageSrc(images[selectedImage])}
                     alt={`${projectTitle} screenshot ${selectedImage + 1}`}
-                    className="max-h-[75vh] aspect-video object-contain pointer-events-none"
+                    className="max-h-[75vh] w-full object-contain pointer-events-none"
                   />
                 </AnimatePresence>
               </div>
@@ -71,7 +71,7 @@ export function Lightbox({
                       e.stopPropagation();
                       goToPrevious();
                     }}
-                    className="hidden md:block absolute -left-2 top-1/2 -translate-y-1/2 -translate-x-full mr-4 bg-base-100 hover:bg-base-content/2 border border-base-content/20 p-3 transition-all cursor-pointer duration-200"
+                    className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-base-100 hover:bg-base-content/2 border border-base-content/20 p-3 transition-all cursor-pointer duration-200"
                     aria-label="Previous image"
                   >
                     <ChevronLeft size={24} className="text-base-content" />
@@ -82,7 +82,7 @@ export function Lightbox({
                       e.stopPropagation();
                       goToNext();
                     }}
-                    className="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full ml-4 bg-base-100 hover:bg-base-content/2 border border-base-content/20 p-3 transition-all cursor-pointer duration-200"
+                    className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-base-100 hover:bg-base-content/2 border border-base-content/20 p-3 transition-all cursor-pointer duration-200"
                     aria-label="Next image"
                   >
                     <ChevronRight size={24} className="text-base-content" />

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import projectsData from "@/json/projects.json";
@@ -6,23 +6,18 @@ import FeaturedCard from "./FeaturedCard";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const featuredTechStacks = {
-  Syncora: ["React", "TypeScript", "Bun", "Supabase"],
-  "Baller Props": ["React", "TypeScript", "Supabase", "Python"],
+  Crate: ["Next.js", "TypeScript", "Tailwind", "Claude API"],
+  Rymli: ["React Native", "Expo", "FastAPI", "Supabase"],
 };
 
+const featuredProjects = projectsData
+  .filter((project) => Object.hasOwn(featuredTechStacks, project.title))
+  .map((project) => ({
+    ...project,
+    techstack: featuredTechStacks[project.title],
+  }));
+
 function FeaturedProjects() {
-  const [featuredProjects, setFeaturedProjects] = useState([]);
-
-  useEffect(() => {
-    const featured = projectsData
-      .filter((project) => ["Syncora", "Baller Props"].includes(project.title))
-      .map((project) => ({
-        ...project,
-        techstack: featuredTechStacks[project.title],
-      }));
-    setFeaturedProjects(featured);
-  }, []);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
