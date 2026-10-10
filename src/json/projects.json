@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Dimebin",
     "slug": "dimebin",
-    "categories": ["music", "data-ai"],
+    "categories": ["personal"],
     "techstack": ["Next.js", "React", "TypeScript", "Tailwind", "Claude API", "Supabase", "SQLite", "Zustand"],
     "description": [
       "Music discovery tool for producers to find niche records and samples."
@@ -35,7 +35,7 @@
     "id": 2,
     "title": "Rymli",
     "slug": "rymli",
-    "categories": ["music"],
+    "categories": ["personal"],
     "techstack": ["React", "React Native", "Expo", "TypeScript", "FastAPI", "Supabase", "TanStack Query"],
     "description": [
       "Music discovery and collection app for vinyl, CDs, and cassettes, on the web and mobile."
@@ -70,7 +70,7 @@
     "id": 3,
     "title": "Syncora",
     "slug": "Syncora",
-    "categories": ["music"],
+    "categories": ["personal"],
     "techstack": [
       "React",
       "TypeScript",
@@ -138,7 +138,7 @@
     "id": 4,
     "slug": "convenient-convert",
     "title": "Convenient Convert",
-    "categories": ["music"],
+    "categories": ["personal"],
     "techstack": ["React", "TypeScript", "Node.js", "Tailwind"],
     "description": [
       "File conversion tool for audio, images, documents, and video."
@@ -191,7 +191,7 @@
     "id": 5,
     "title": "Baller Props",
     "slug": "baller-props",
-    "categories": ["data-ai"],
+    "categories": ["personal"],
     "techstack": [
       "React",
       "TypeScript",
@@ -235,7 +235,7 @@
     "id": 6,
     "title": "Polyview",
     "slug": "polyview",
-    "categories": ["data-ai"],
+    "categories": ["personal"],
     "techstack": ["React", "Typescript", "Node.js", "Bun"],
     "description": [
       "Polymarket Analytics and Research Tool for Trending Markets"
@@ -290,7 +290,7 @@
   {
     "id": 7,
     "title": "Portfolio",
-    "categories": [],
+    "categories": ["personal"],
     "techstack": ["React", "JavaScript", "Node.js", "Tailwind"],
     "description": ["You're on it right now :)"],
     "site": "https://wnzel.dev",
@@ -300,7 +300,7 @@
   {
     "id": 8,
     "title": "Facial Controller for Gaming",
-    "categories": ["data-ai"],
+    "categories": ["personal"],
     "techstack": ["Python", "OpenCV", "Mediapipe"],
     "description": [
       "Controller for Disabled People to play video games using face movements"
@@ -312,7 +312,7 @@
     "id": 9,
     "title": "Peraltas Roofing",
     "slug": "peraltas-roofing",
-    "categories": ["client"],
+    "categories": ["professional"],
     "industry": "Roofing",
     "location": "Phoenix, AZ",
     "techstack": ["React", "TypeScript", "Tailwind", "Supabase", "Nodemailer", "Vercel"],
@@ -350,7 +350,7 @@
     "id": 10,
     "title": "PPS Controls",
     "slug": "pps-controls",
-    "categories": ["client"],
+    "categories": ["professional"],
     "industry": "Industrial controls & automation",
     "location": "Tempe, AZ",
     "techstack": ["Next.js", "React", "CSS", "Vercel", "Cloudflare"],
@@ -388,7 +388,7 @@
     "id": 11,
     "title": "Montesinos Electric",
     "slug": "montesinos-electric",
-    "categories": ["client"],
+    "categories": ["professional"],
     "industry": "Electrical contractor",
     "location": "Phoenix, AZ",
     "status": "In progress",

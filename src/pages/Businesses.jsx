@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/Projects/ProjectCard";
-import { clientProjects } from "@/lib/projects";
+import { professionalProjects } from "@/lib/projects";
 
 // Unlisted page for sharing with business owners: wnzel.dev/projects/businesses
 const contactHref = `mailto:wenzelescudero@gmail.com?subject=${encodeURIComponent(
@@ -41,7 +41,7 @@ function Businesses() {
       </motion.section>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {clientProjects.map((project, index) => (
+        {professionalProjects.map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 12 }}

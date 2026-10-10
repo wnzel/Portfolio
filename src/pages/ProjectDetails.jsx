@@ -7,7 +7,7 @@ import { Carousel } from "@/components/ProjectDetails/Carousel";
 import { Lightbox } from "@/components/ProjectDetails/Lightbox";
 import { Section } from "@/components/ProjectDetails/Section";
 import { ColorPalette } from "@/components/ProjectDetails/ColorPalette";
-import { isClientProject } from "@/lib/projects";
+import { isProfessionalProject } from "@/lib/projects";
 import PropTypes from "prop-types";
 
 // variant="business" is the plain-language view linked from /projects/businesses.
@@ -39,7 +39,7 @@ export function ProjectDetails({ projectSlug, variant = "default" }) {
 
   useEffect(() => {
     const foundProject = projectsData.find(
-      (p) => p.slug === projectSlug && (!isBusiness || isClientProject(p))
+      (p) => p.slug === projectSlug && (!isBusiness || isProfessionalProject(p))
     );
     setProject(foundProject);
   }, [projectSlug, isBusiness]);
