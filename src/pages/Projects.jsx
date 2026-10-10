@@ -19,8 +19,8 @@ function Projects({ filter, onFilterChange }) {
     : projects;
 
   return (
-    <div className="flex w-full flex-col gap-6 px-4 py-8 md:w-[736px] mx-auto">
-      <div className="flex flex-col gap-4">
+    <div className="flex w-full flex-col gap-4 px-4 pb-8 md:w-[736px] mx-auto">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
         <h1 className="text-lg font-medium text-base-content tracking-tight">
           Projects
         </h1>

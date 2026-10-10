@@ -22,21 +22,21 @@ function ProjectCard({ project, variant = "default" }) {
   const source = isBusiness ? null : project.source;
 
   const image = imgSrc && (
-    <div className="relative aspect-video w-full overflow-hidden border border-base-content/20">
+    <div className="relative aspect-[2/1] w-full overflow-hidden border border-base-content/20">
       <img
         src={imgSrc}
         alt={project.title}
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
       />
     </div>
   );
 
   return (
-    <article className="flex h-full flex-col gap-4 border border-base-content/20 bg-base-100 p-4 sm:p-5">
+    <article className="flex h-full flex-col gap-3 border border-base-content/20 bg-base-100 p-4">
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
-          <h3 className="mb-2 text-base font-medium tracking-tight text-base-content">
+          <h3 className="mb-1.5 text-base font-medium tracking-tight text-base-content">
             {project.title}
           </h3>
           {isBusiness ? (
@@ -94,7 +94,7 @@ function ProjectCard({ project, variant = "default" }) {
 
       {/* links */}
       {(project.site || source || detailsPath) && (
-        <div className="mt-auto grid w-full grid-cols-3 items-center pt-2">
+        <div className="mt-auto grid w-full grid-cols-3 items-center pt-1">
           {project.site && (
             <a
               href={project.site}
