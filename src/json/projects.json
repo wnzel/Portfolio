@@ -391,13 +391,12 @@
     "categories": ["professional"],
     "industry": "Electrical contractor",
     "location": "Phoenix, AZ",
-    "status": "In progress",
-    "techstack": ["HTML", "CSS", "JavaScript", "Python"],
+    "techstack": ["HTML", "CSS", "JavaScript", "Python", "Vercel"],
     "description": [
-      "Website redesign for a family-owned Phoenix electrical contractor, moving them off Wix."
+      "Website redesign for a family-owned Phoenix electrical contractor, replacing their old Wix site."
     ],
     "detailed": {
-      "overview": "Montesinos Electric is a family-owned electrical contractor that has served the Phoenix area for nearly 20 years. I'm redesigning their website and moving it off Wix, keeping their logo, real job photos, and family story while making it easier for customers to see what they do and request a quote.",
+      "overview": "Montesinos Electric is a family-owned electrical contractor that has served the Phoenix area for nearly 20 years. I redesigned their website to replace their old Wix site, keeping their logo, real job photos, and family story while making it easier for customers to see what they do and request a quote.",
 
       "goal": "Their old site had real photos and a great story, but the portfolio page was empty and a few pages were still placeholder templates. They needed a site that says what they do and where right away, shows off their residential, commercial, and industrial work, and gives customers a simple way to request a free quote or call.",
 
@@ -415,10 +414,12 @@
         "/montesinos/montesinos-services.jpg",
         "/montesinos/montesinos-work.jpg",
         "/montesinos/montesinos-gallery.jpg",
+        "/montesinos/montesinos-stories.jpg",
         "/montesinos/montesinos-story.jpg",
         "/montesinos/montesinos-quote.jpg"
       ]
     },
-    "img": "/montesinos/montesinos-home.jpg"
+    "img": "/montesinos/montesinos-home.jpg",
+    "site": "https://montesinoselectric.vercel.app/"
   }
 ]
