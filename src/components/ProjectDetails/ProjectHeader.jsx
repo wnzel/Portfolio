@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import PropTypes from "prop-types";
+import StatusBadge from "@/components/Projects/StatusBadge";
 
-export function ProjectHeader({ project }) {
+export function ProjectHeader({ project, showTechstack = true }) {
+  const meta = [project.industry, project.location].filter(Boolean).join(" · ");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -11,25 +14,37 @@ export function ProjectHeader({ project }) {
       className="space-y-4"
     >
       <div className="flex items-start justify-between gap-4">
-        <h1 className="text-2xl sm:text-3xl font-medium text-base-content tracking-tight">
-          {project.title}
-        </h1>
-        <span className="text-base-content/40 text-xs font-light">
-          {String(project.id).padStart(2, "0")}
-        </span>
+        <div className="space-y-1">
+          <h1 className="text-2xl sm:text-3xl font-medium text-base-content tracking-tight">
+            {project.title}
+          </h1>
+          {meta && (
+            <p className="text-sm font-light text-base-content/60">{meta}</p>
+          )}
+        </div>
+        <div className="flex shrink-0 items-center gap-3">
+          {project.status && <StatusBadge status={project.status} />}
+          {showTechstack && (
+            <span className="text-base-content/40 text-xs font-light">
+              {String(project.id).padStart(2, "0")}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* tech stack */}
-      <div className="flex flex-wrap gap-x-3 gap-y-1">
-        {project.techstack.map((tech, i) => (
-          <span key={tech} className="text-xs text-base-content/50 font-light">
-            {tech}
-            {i < project.techstack.length - 1 && (
-              <span className="ml-3 text-base-content/20">/</span>
-            )}
-          </span>
-        ))}
-      </div>
+      {showTechstack && (
+        <div className="flex flex-wrap gap-x-3 gap-y-1">
+          {project.techstack.map((tech, i) => (
+            <span key={tech} className="text-xs text-base-content/50 font-light">
+              {tech}
+              {i < project.techstack.length - 1 && (
+                <span className="ml-3 text-base-content/20">/</span>
+              )}
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* links */}
       <div className="flex gap-4">
@@ -44,7 +59,7 @@ export function ProjectHeader({ project }) {
             <ExternalLink size={14} />
           </a>
         )}
-        {project.source && (
+        {showTechstack && project.source && (
           <a
             href={project.source}
             target="_blank"
@@ -65,7 +80,11 @@ ProjectHeader.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     techstack: PropTypes.arrayOf(PropTypes.string).isRequired,
+    industry: PropTypes.string,
+    location: PropTypes.string,
+    status: PropTypes.string,
     site: PropTypes.string,
     source: PropTypes.string,
   }).isRequired,
+  showTechstack: PropTypes.bool,
 };

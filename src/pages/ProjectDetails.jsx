@@ -7,9 +7,12 @@ import { Carousel } from "@/components/ProjectDetails/Carousel";
 import { Lightbox } from "@/components/ProjectDetails/Lightbox";
 import { Section } from "@/components/ProjectDetails/Section";
 import { ColorPalette } from "@/components/ProjectDetails/ColorPalette";
+import { isClientProject } from "@/lib/projects";
 import PropTypes from "prop-types";
 
-export function ProjectDetails({ projectSlug }) {
+// variant="business" is the plain-language view linked from /projects/businesses.
+export function ProjectDetails({ projectSlug, variant = "default" }) {
+  const isBusiness = variant === "business";
   const [project, setProject] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const [isDark, setIsDark] = useState(false);
@@ -35,9 +38,11 @@ export function ProjectDetails({ projectSlug }) {
   }, []);
 
   useEffect(() => {
-    const foundProject = projectsData.find((p) => p.slug === projectSlug);
+    const foundProject = projectsData.find(
+      (p) => p.slug === projectSlug && (!isBusiness || isClientProject(p))
+    );
     setProject(foundProject);
-  }, [projectSlug]);
+  }, [projectSlug, isBusiness]);
 
   const getCurrentImageSrc = useCallback(
     (imageData) => {
@@ -126,18 +131,22 @@ export function ProjectDetails({ projectSlug }) {
     }
   }, [touchStart, touchEnd, goToNext, goToPrevious]);
 
+  const backLink = (
+    <Link
+      to={isBusiness ? "/projects/businesses" : "/projects"}
+      className="text-sm font-light text-base-content hover:text-base-content/60 transition-colors inline-flex items-center gap-2 border-b border-base-content/20"
+    >
+      <ArrowLeft size={14} />
+      {isBusiness ? "Back to Websites" : "Back to Projects"}
+    </Link>
+  );
+
   if (!project) {
     return (
       <div className="flex min-h-screen w-full items-center justify-center px-4 md:w-[736px] mx-auto">
         <div className="text-center space-y-4">
           <p className="text-base-content font-light">Project not found</p>
-          <Link
-            to="/projects"
-            className="text-sm font-light text-base-content hover:text-base-content/60 transition-colors inline-flex items-center gap-2 border-b border-base-content/20"
-          >
-            <ArrowLeft size={14} />
-            Back to Projects
-          </Link>
+          {backLink}
         </div>
       </div>
     );
@@ -150,13 +159,7 @@ export function ProjectDetails({ projectSlug }) {
           <p className="text-base-content font-light">
             Detailed information coming soon
           </p>
-          <Link
-            to="/projects"
-            className="text-sm font-light text-base-content hover:text-base-content/60 transition-colors inline-flex items-center gap-2 border-b border-base-content/20"
-          >
-            <ArrowLeft size={14} />
-            Back to Projects
-          </Link>
+          {backLink}
         </div>
       </div>
     );
@@ -166,16 +169,10 @@ export function ProjectDetails({ projectSlug }) {
     <main className="min-h-screen w-full px-4 py-8 md:w-[736px] mx-auto">
       <div className="space-y-12">
         {/* Back Link */}
-        <Link
-          to="/projects"
-          className="text-sm font-light text-base-content hover:text-base-content/60 transition-colors inline-flex items-center gap-2 border-b border-base-content/20"
-        >
-          <ArrowLeft size={14} />
-          Back to Projects
-        </Link>
+        {backLink}
 
         {/* Header */}
-        <ProjectHeader project={project} />
+        <ProjectHeader project={project} showTechstack={!isBusiness} />
 
         {/* Images Carousel */}
         {project.detailed.images && project.detailed.images.length > 0 && (
@@ -216,7 +213,7 @@ export function ProjectDetails({ projectSlug }) {
             withBorder
           />
 
-          {project.detailed.colors && (
+          {!isBusiness && project.detailed.colors && (
             <ColorPalette
               colors={project.detailed.colors}
               delay={0.2}
@@ -225,9 +222,10 @@ export function ProjectDetails({ projectSlug }) {
           )}
         </div>
 
+        {/* client projects describe the client's goal instead of a motivation */}
         <Section
-          title="Motivation"
-          content={project.detailed.motivation}
+          title={project.detailed.goal ? "The Goal" : "Motivation"}
+          content={project.detailed.goal ?? project.detailed.motivation}
           delay={0.25}
         />
 
@@ -245,4 +243,5 @@ export default ProjectDetails;
 
 ProjectDetails.propTypes = {
   projectSlug: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(["default", "business"]),
 };

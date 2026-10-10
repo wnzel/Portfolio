@@ -1,49 +1,55 @@
 [
   {
     "id": 1,
-    "title": "Crate",
-    "slug": "crate",
-    "techstack": ["Next.js", "React", "TypeScript", "Tailwind", "Claude API", "SQLite", "Zustand"],
+    "title": "Dimebin",
+    "slug": "dimebin",
+    "categories": ["music", "data-ai"],
+    "techstack": ["Next.js", "React", "TypeScript", "Tailwind", "Claude API", "Supabase", "SQLite", "Zustand"],
     "description": [
       "Music discovery tool for producers to find niche records and samples."
     ],
     "detailed": {
-      "overview": "Crate helps music producers dig for lesser-known records and sample ideas. Start with a YouTube link or describe a sound, then browse Discogs records, listen in an embedded player, and explore similar tracks ranked by musical metadata. Built with Next.js and TypeScript, with Claude-assisted search and a minimal interface that keeps the focus on the music.",
-      "motivation": "I wanted to make crate digging easier without losing the surprise of finding something new. Crate brings record research, listening, and discovery into one place, so producers can follow a sound into a new set of records without juggling browser tabs.",
+      "overview": "Dimebin helps music producers dig for lesser-known records and sample ideas. Start with a YouTube link or describe a sound, then browse Discogs records, listen in an embedded player, and explore similar tracks ranked by musical metadata. Built with Next.js and TypeScript, with Claude-assisted search, Supabase accounts for favorites and playlists, and a minimal interface that keeps the focus on the music.",
+      "motivation": "I wanted to make crate digging easier without losing the surprise of finding something new. Dimebin brings record research, listening, and discovery into one place, so producers can follow a sound into a new set of records without juggling browser tabs.",
       "features": [
-        "Search from a YouTube link or a natural-language description of a sound",
-        "Browse Discogs records with genre, style, country, and year filters",
+        "Search from a YouTube link or a natural-language description of a sound, which Claude turns into genre, style, and year filters",
+        "Niche-first results that filter out mainstream records by Discogs ownership and YouTube views",
         "Explore similar tracks with match percentages and optional Claude reranking",
         "Embedded YouTube playback with track navigation, autoplay, and shuffle",
-        "Record and artist detail pages with metadata, tracklists, and discovery history"
+        "Record and artist pages with metadata, tracklists, and full discographies",
+        "Accounts with favorites, listening history, and playlists that can be private, shared with friends, or public"
       ],
       "colors": ["#0A0A0A", "#F5F5F5", "#FFFFFF", "#A3A3A3"],
       "images": [
-        "/crate/crate-home.jpg",
-        "/crate/crate-search.jpg",
-        "/crate/crate-record.jpg"
+        "/dimebin/dimebin-home.jpg",
+        "/dimebin/dimebin-search.jpg",
+        "/dimebin/dimebin-record.jpg",
+        "/dimebin/dimebin-player.jpg",
+        "/dimebin/dimebin-artist.jpg"
       ]
     },
-    "img": "/crate/crate-home.jpg",
-    "site": "https://crate-black.vercel.app/"
+    "img": "/dimebin/dimebin-home.jpg",
+    "site": "https://dimebin.com/"
   },
   {
     "id": 2,
     "title": "Rymli",
     "slug": "rymli",
-    "techstack": ["React Native", "Expo", "TypeScript", "FastAPI", "Supabase", "TanStack Query"],
+    "categories": ["music"],
+    "techstack": ["React", "React Native", "Expo", "TypeScript", "FastAPI", "Supabase", "TanStack Query"],
     "description": [
-      "Mobile music discovery and collection app for vinyl, CDs, and cassettes."
+      "Music discovery and collection app for vinyl, CDs, and cassettes, on the web and mobile."
     ],
     "detailed": {
-      "overview": "Rymli is a mobile app for music lovers and physical-media collectors. It connects artists, albums, and specific pressings with personal collections, wantlists, ratings, reviews, and community activity. Built with React Native and Expo, a FastAPI backend for Discogs catalog search, and Supabase for accounts, collection data, and storage.",
+      "overview": "Rymli is a music discovery and collection app for music lovers and physical-media collectors, available on the web at rymli.com and as a mobile app. It connects artists, albums, and specific pressings with personal collections, wantlists, ratings, reviews, and community activity. The website is built with React, TypeScript, and Vite, and the mobile app with React Native and Expo. Both share a FastAPI backend for Discogs catalog search and Supabase for accounts, collection data, and storage.",
       "motivation": "I wanted a place where discovering music and keeping track of a physical collection felt connected. Rymli combines catalog research with personal taste and community reviews, making it easier to find an album, choose a pressing, and remember what belongs in your collection.",
       "features": [
-        "Discover artists, albums, and specific editions through Discogs catalog search",
+        "Discover page of hand-picked records and genres that anyone can browse without an account",
+        "Search artists, albums, specific editions, and people through the Discogs catalog",
         "Organize owned vinyl, CDs, and cassettes alongside a personal wantlist",
         "Rate albums and write reviews with collector profiles",
         "Following and Explore feeds for community reviews and music discovery",
-        "Email and social sign-in flows, profile settings, and light and dark themes"
+        "Email, Google, Spotify, and Discord sign-in, profile settings, and light and dark themes"
       ],
       "colors": {
         "dark": ["#000000", "#0A0A0A", "#FFFFFF", "#8E8E8E"],
@@ -51,16 +57,20 @@
       },
       "images": [
         "/rymli/rymli-home.jpg",
-        "/rymli/rymli-sign-up.jpg",
-        "/rymli/rymli-sign-in.jpg"
+        "/rymli/rymli-picks.jpg",
+        "/rymli/rymli-genres.jpg",
+        "/rymli/rymli-sign-in.jpg",
+        "/rymli/rymli-sign-up.jpg"
       ]
     },
-    "img": "/rymli/rymli-home.jpg"
+    "img": "/rymli/rymli-home.jpg",
+    "site": "https://rymli.com/"
   },
   {
     "id": 3,
     "title": "Syncora",
     "slug": "Syncora",
+    "categories": ["music"],
     "techstack": [
       "React",
       "TypeScript",
@@ -126,51 +136,9 @@
 
   {
     "id": 4,
-    "title": "Baller Props",
-    "slug": "baller-props",
-    "techstack": [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "Supabase",
-      "Python",
-      "FastAPI",
-      "Docker"
-    ],
-    "description": [
-      "Sports data research tool using prop lines from online sportsbooks."
-    ],
-    "detailed": {
-      "overview": "A sports betting research tool for NBA and WNBA prop lines. Aggregates data from multiple sportsbooks and provides statistical analysis to streamline research that would otherwise require lots of browser tabs.",
-
-      "motivation": "Researching sports props required manually comparing data across multiple sportsbooks and ESPN, leading to a ton of open tabs and no way to track stats efficiently. Existing tools were overpriced for occasional betting, so I built a streamlined alternative focused on data aggregation and easy comparison.",
-
-      "features": [
-        "Scrapes prop lines from PrizePicks, Underdog, and DraftKings",
-        "Sortable and filterable tables for quick prop discovery",
-        "Statistical analysis including L10 averages, hit rate percentages, and head to head data",
-        "Compare odds across sportsbooks to find the best lines",
-        "Historical season data dating back to 2023",
-        "Custom backend using FastAPI and a forked nba_api library for extended data coverage"
-      ],
-      "colors": ["#0A0B0B", "#FFFEFE", "#0385C7", "#359861", "#982526"],
-      "images": [
-        "/ballerprops/baller-props.avif",
-        "/ballerprops/baller-props-2.avif",
-        "/ballerprops/baller-props-3.avif",
-        "/ballerprops/baller-props-4.avif",
-        "/ballerprops/baller-props-5.avif"
-      ]
-    },
-    "img": "ballerprops/baller-props.avif",
-    "site": "https://ballerprops.com/",
-    "source": "https://github.com/wnzel/baller-props"
-  },
-
-  {
-    "id": 5,
     "slug": "convenient-convert",
     "title": "Convenient Convert",
+    "categories": ["music"],
     "techstack": ["React", "TypeScript", "Node.js", "Tailwind"],
     "description": [
       "File conversion tool for audio, images, documents, and video."
@@ -220,9 +188,54 @@
   },
 
   {
+    "id": 5,
+    "title": "Baller Props",
+    "slug": "baller-props",
+    "categories": ["data-ai"],
+    "techstack": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Supabase",
+      "Python",
+      "FastAPI",
+      "Docker"
+    ],
+    "description": [
+      "Sports data research tool using prop lines from online sportsbooks."
+    ],
+    "detailed": {
+      "overview": "A sports betting research tool for NBA and WNBA prop lines. Aggregates data from multiple sportsbooks and provides statistical analysis to streamline research that would otherwise require lots of browser tabs.",
+
+      "motivation": "Researching sports props required manually comparing data across multiple sportsbooks and ESPN, leading to a ton of open tabs and no way to track stats efficiently. Existing tools were overpriced for occasional betting, so I built a streamlined alternative focused on data aggregation and easy comparison.",
+
+      "features": [
+        "Scrapes prop lines from PrizePicks, Underdog, and DraftKings",
+        "Sortable and filterable tables for quick prop discovery",
+        "Statistical analysis including L10 averages, hit rate percentages, and head to head data",
+        "Compare odds across sportsbooks to find the best lines",
+        "Historical season data dating back to 2023",
+        "Custom backend using FastAPI and a forked nba_api library for extended data coverage"
+      ],
+      "colors": ["#0A0B0B", "#FFFEFE", "#0385C7", "#359861", "#982526"],
+      "images": [
+        "/ballerprops/baller-props.avif",
+        "/ballerprops/baller-props-2.avif",
+        "/ballerprops/baller-props-3.avif",
+        "/ballerprops/baller-props-4.avif",
+        "/ballerprops/baller-props-5.avif"
+      ]
+    },
+    "img": "ballerprops/baller-props.avif",
+    "site": "https://ballerprops.com/",
+    "source": "https://github.com/wnzel/baller-props"
+  },
+
+  {
     "id": 6,
     "title": "Polyview",
     "slug": "polyview",
+    "categories": ["data-ai"],
     "techstack": ["React", "Typescript", "Node.js", "Bun"],
     "description": [
       "Polymarket Analytics and Research Tool for Trending Markets"
@@ -277,6 +290,7 @@
   {
     "id": 7,
     "title": "Portfolio",
+    "categories": [],
     "techstack": ["React", "JavaScript", "Node.js", "Tailwind"],
     "description": ["You're on it right now :)"],
     "site": "https://wnzel.dev",
@@ -286,10 +300,125 @@
   {
     "id": 8,
     "title": "Facial Controller for Gaming",
+    "categories": ["data-ai"],
     "techstack": ["Python", "OpenCV", "Mediapipe"],
     "description": [
       "Controller for Disabled People to play video games using face movements"
     ],
     "source": "https://github.com/wnzel/Facial-Controller"
+  },
+
+  {
+    "id": 9,
+    "title": "Peraltas Roofing",
+    "slug": "peraltas-roofing",
+    "categories": ["client"],
+    "industry": "Roofing",
+    "location": "Phoenix, AZ",
+    "techstack": ["React", "TypeScript", "Tailwind", "Supabase", "Nodemailer", "Vercel"],
+    "description": [
+      "Website for a family-owned Arizona roofing company, built to turn visitors into free inspection requests."
+    ],
+    "detailed": {
+      "overview": "Peraltas Roofing is a family-owned roofing company serving homeowners and businesses across the Phoenix area. I built their website from start to finish: a homepage that leads with free inspections, a page for every service they offer, a gallery of finished jobs, and a free estimate form. The site is live at peraltasroofingaz.com.",
+
+      "goal": "Peraltas wanted a website that helps homeowners trust them before the first phone call and makes it easy to ask for a free inspection. That meant putting their Google reviews and real job photos front and center, explaining each service in plain language, and sending estimate requests straight to their inbox.",
+
+      "features": [
+        "Free estimate form that emails each request to the owner with the customer's contact info, address, property type, and the service they need",
+        "Google reviews section featuring their rating and recent customer reviews",
+        "A page for each service, including roof repair, replacements, inspections, silicone roof coatings, and a program for realtors",
+        "Photo gallery of completed jobs, with before-and-after photos for individual projects",
+        "Phone number and free estimate button in the header of every page",
+        "Works on phones, tablets, and desktops"
+      ],
+      "colors": ["#B84B3D", "#353535", "#F4F7FB", "#FFFFFF"],
+      "images": [
+        "/peraltas/peraltas-home.jpg",
+        "/peraltas/peraltas-reviews.jpg",
+        "/peraltas/peraltas-services.jpg",
+        "/peraltas/peraltas-roof-repair.jpg",
+        "/peraltas/peraltas-gallery.jpg",
+        "/peraltas/peraltas-estimate.jpg"
+      ]
+    },
+    "img": "/peraltas/peraltas-home.jpg",
+    "site": "https://www.peraltasroofingaz.com/"
+  },
+
+  {
+    "id": 10,
+    "title": "PPS Controls",
+    "slug": "pps-controls",
+    "categories": ["client"],
+    "industry": "Industrial controls & automation",
+    "location": "Tempe, AZ",
+    "techstack": ["Next.js", "React", "CSS", "Vercel", "Cloudflare"],
+    "description": [
+      "Website for an Arizona industrial controls and automation company, built during my internship."
+    ],
+    "detailed": {
+      "overview": "PPS Controls & Automation is a Tempe-based company that builds control panels, programs automation systems, and supports industrial plants around the clock. I worked on their website during my internship with The Automation Interns, organizing a wide range of technical services into a site that engineers and plant managers can navigate quickly.",
+
+      "goal": "PPS needed a website that matched the quality of their work. Their services cover more than a dozen engineering specialties, so the site had to help visitors find the right capability quickly, see past projects, and reach an expert fast, including for 24/7 emergency service.",
+
+      "features": [
+        "A page for each engineering service, from control panel fabrication and PLC programming to SCADA integration and startup",
+        "Panel shop page for their UL 508A and UL 698A listed control panels",
+        "Projects page with search and categories by service and industry",
+        "\"Ask an Expert\" form that lets visitors send technical questions straight to their team",
+        "24/7 emergency service page, plus the phone number in the header of every page",
+        "Industries served and certifications that build trust with new customers"
+      ],
+      "colors": ["#81D039", "#3B3B3B", "#5E646B", "#F3F5EF", "#FFFFFF"],
+      "images": [
+        "/pps/pps-home.jpg",
+        "/pps/pps-services.jpg",
+        "/pps/pps-capabilities.jpg",
+        "/pps/pps-panel-shop.jpg",
+        "/pps/pps-projects.jpg",
+        "/pps/pps-ask-an-expert.jpg"
+      ]
+    },
+    "img": "/pps/pps-home.jpg",
+    "site": "https://www.ppscontrols.com/"
+  },
+
+  {
+    "id": 11,
+    "title": "Montesinos Electric",
+    "slug": "montesinos-electric",
+    "categories": ["client"],
+    "industry": "Electrical contractor",
+    "location": "Phoenix, AZ",
+    "status": "In progress",
+    "techstack": ["HTML", "CSS", "JavaScript", "Python"],
+    "description": [
+      "Website redesign for a family-owned Phoenix electrical contractor, moving them off Wix."
+    ],
+    "detailed": {
+      "overview": "Montesinos Electric is a family-owned electrical contractor that has served the Phoenix area for nearly 20 years. I'm redesigning their website and moving it off Wix, keeping their logo, real job photos, and family story while making it easier for customers to see what they do and request a quote.",
+
+      "goal": "Their old site had real photos and a great story, but the portfolio page was empty and a few pages were still placeholder templates. They needed a site that says what they do and where right away, shows off their residential, commercial, and industrial work, and gives customers a simple way to request a free quote or call.",
+
+      "features": [
+        "Homepage that names their services and service area right away, with a free quote button and phone number up top",
+        "Separate pages for new construction, fixture installation, and electrical troubleshooting",
+        "Project gallery of 20 real jobs, filterable by residential, commercial, and industrial work, with a full-size photo viewer",
+        "Free quote page that helps customers organize their project details before they call",
+        "\"Hablamos español\" banner so Spanish-speaking customers know they can call",
+        "On phones, a bar at the bottom of the screen lets customers call or request a quote with one tap"
+      ],
+      "colors": ["#FFE13B", "#161616", "#FEFEFD", "#F3F4F0", "#555750"],
+      "images": [
+        "/montesinos/montesinos-home.jpg",
+        "/montesinos/montesinos-services.jpg",
+        "/montesinos/montesinos-work.jpg",
+        "/montesinos/montesinos-gallery.jpg",
+        "/montesinos/montesinos-story.jpg",
+        "/montesinos/montesinos-quote.jpg"
+      ]
+    },
+    "img": "/montesinos/montesinos-home.jpg"
   }
 ]

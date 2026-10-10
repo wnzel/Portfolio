@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import projectsData from "@/json/projects.json";
-import FeaturedCard from "./FeaturedCard";
+import ProjectCard from "@/components/Projects/ProjectCard";
 import { motion, useInView, useAnimation } from "framer-motion";
 
 const featuredTechStacks = {
-  Crate: ["Next.js", "TypeScript", "Tailwind", "Claude API"],
+  Dimebin: ["Next.js", "TypeScript", "Tailwind", "Claude API"],
   Rymli: ["React Native", "Expo", "FastAPI", "Supabase"],
 };
 
@@ -57,7 +57,7 @@ function FeaturedProjects() {
       {/* projects */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {featuredProjects.map((project) => (
-          <FeaturedCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </motion.div>
